@@ -1,0 +1,118 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    min-height: 100%;
+    transition: transform 0.4s ease;
+  }
+  .card:hover{
+  transform: scale(1.01);
+  box-shadow: 2px 2px 15px 4px #a19f9f
+  }
+
+  .image {
+    width: 100%;
+    height: 148px;
+  }
+  
+  .content {
+    display: flex;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 145px;
+    overflow: hidden;
+    padding: 12px;
+    min-width: 300px;
+    width: 400px;
+  }
+  
+  .content h3 {
+    margin: 0;
+  }
+  
+  .desc {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    text-align: center;
+    line-height: 150%;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .footer button {
+    background-color: var(--main_color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @keyframes flashing{
+    50%{
+      opacity: 0.3;
+      background: #02702e;
+      /* background: #eee;
+      width: 200%;
+      height: 200%; */
+    }
+    100%,0%{
+      opacity: 1;
+      background:var(--main_color);
+      /* background-color: #eee;
+      width: 0px;
+      height: 0px; */
+    }
+  }
+
+  .footer button{
+    /* width: 0px;
+    height: 0px ;
+    top: 50%;
+    left: 50%;
+    transform: translate((-50%,-50%)); */
+    /* position: absolute; */
+    opacity: 0px;
+    transition-delay: 2s;
+    z-index: 1111111;
+    background: var(--main_color);
+    animation: flashing 2s infinite;
+  }
+
+  .con-land{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  h2{
+    margin: 25px auto;
+  }
+
+  p{
+    margin: 4px 0px;
+  }
+
+  .dollers_icon{
+    width: 20px;
+    height: 20px;
+  }
+  .fullcontainer{
+    display: flex;
+    gap: 26px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
