@@ -42,7 +42,8 @@ const LandList = () => {
           {lands.map((land) => (
               <div key={land.id} className=''  onClick={() => navigate(`/landdetailspage/${land.id}`)}>
               <div className={styles.card}>
-                <img src={land.idPhoto}  className={styles.image}/>
+                {/* <img src={land.idPhoto}  className={styles.image}/> */}
+                <img src={land.landMedia[0]} className={styles.image}/>
                   <div id="Available_lands" className={styles.content}>
                       <span style={{display:"flex"}}>
                          <img src="/lands/dollers.png" style={{width: "20px",height: "20px"}} />

@@ -16,7 +16,7 @@ const [sortOption, setSortOption] = useState("");
   useEffect (() => {
     const fetchLands = async () => {
       try {
-        const res = await axios.get("/api/v1/lands");
+        const res = await axios.get("/api/v1/lands/");
         const data = Array.isArray(res.data.data.lands) ? res.data.data.lands : [];
         setLands(data);
         setFilteredLands(data);
@@ -188,10 +188,10 @@ const [sortOption, setSortOption] = useState("");
         {filteredLands.map((property) => (
           <div key={property.id} className="property-item">
             <div className="property-image">
-              {/* <img src="/lands/p1.jpg"  /> */}
-              {property.landMedia?.map((media,i)=> (
+              <img src={property.landMedia[0]}/>
+              {/* {property.landMedia?.map((media,i)=> (
                   <img key={i} src={media} alt={`Media ${i+1}`} />
-                ))}
+                ))} */}
                 {/* <img src={property.idPhoto}  className={styles.image}/> */}
             </div>
             

@@ -49,9 +49,7 @@ useEffect(() => {
       {filteredLands.map(property => (
           <div key={property.id} className="property-item1">
             <div className="property-image1">
-            {property.landMedia?.map((media,i)=> (
-                  <img className='image1' key={i} src={media} alt={`Media ${i+1}`} />
-                ))}
+              <img src={property.landMedia[0]}/> 
             </div>
             
             <div className="property-details1">
