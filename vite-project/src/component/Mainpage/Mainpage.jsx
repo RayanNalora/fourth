@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import ReasultSearch from "../Header/SearchSection/Filter/ReasultSearch/ReasultSearch";
 import Login from '../login/login';
 import Signup from '../Signup/Signup';
-import Page2 from '../dash/Page2';
+import Page1 from '../dash/Page1';
 function Mainpage() {
   const navigate = useNavigate();
   const gotoContactForm = () => {
@@ -21,7 +21,7 @@ function Mainpage() {
 
         <Header/>
         <SearchSection/>
-        {/* <Page2/> */}
+        {/* <Page1/> */}
         <LandList/>
         <Advisors/>
         <div className="imagetofram" style={{position: "relative",marginBottom: "61px"}}>

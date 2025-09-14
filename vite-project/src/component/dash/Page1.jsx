@@ -110,7 +110,7 @@ return (
         <thead>
           <tr>
             <th>ID</th>
-            <th>Owner ID</th>
+{/*             <th>Owner ID</th> */}
             <th>Owner Name</th>
             <th>City</th>
             <th>Region</th>
@@ -172,6 +172,7 @@ return (
                 ) : (
                   l.area
                 )}
+   dunams
               </td>
               <td>
                 {editingLand === l.id ? (
@@ -183,9 +184,9 @@ return (
                   />
                 ) : (
                        l.price
-                )}
+                )} $
               </td>
-              <td>{l.price}</td>
+              <td>{l.status}</td>
               <td className="action-buttons">
                 {editingLand === l.id ? (
                   <button className="btn btn-edit" onClick={() => handleSave(l.id)}>
